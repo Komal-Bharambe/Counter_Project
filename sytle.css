@@ -1,0 +1,13 @@
+*{
+    margin:0%;
+    padding: 0%;
+    background-color: black;
+    color: white;
+}
+.container{
+    font-size: 35px;
+    position: absolute;
+    top: 30%;
+    left: 40%;
+
+}

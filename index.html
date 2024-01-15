@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="sytle.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Counter</h1>
+        <div id="line"></div>
+        <p id="timer"></p>
+    </div>
+    <script>
+        const countDate = new Date("22 nov 2023 13:30:00").getTime();
+
+        var x = setInterval(function(){
+            let now = new Date().getTime();
+            let distance = countDate - now;
+            var day = Math.floor(distance / (1000*60*60*24));
+            var hrs = Math.floor((distance % (1000*60*60*24))/ (1000*60*60));
+            var min = Math.floor((distance % (1000*60*60))/ (1000*60));
+            var sec =Math.floor((distance % (1000*60*60))/ (1000));
+            document.getElementById("timer").innerHTML =  day + "d " + hrs + "h " + min + "m " + sec + "s ";
+        })
+    </script>
+</body>
+</html>
